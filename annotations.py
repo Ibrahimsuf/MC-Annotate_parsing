@@ -7,7 +7,7 @@ class Annotations:
         base_pair_lines = self.extract_information("Base-pairs")
         with open(output_file, "w") as file:
             for line in base_pair_lines:
-                file.write(line)
+                file.write(f"{line}\n")
 
     def extract_information(self, heading_keyword):
         lines_after_heading = []
