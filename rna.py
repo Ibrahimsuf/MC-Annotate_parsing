@@ -1,6 +1,6 @@
 import subprocess
 import re
-from annotations import Annotations()
+from annotations import Annotations
 
 class RNA:
     def __init__(self, rna_file) -> None:
