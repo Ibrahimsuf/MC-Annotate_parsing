@@ -4,7 +4,7 @@ class Annotations:
 
 
     def write_base_pair_info_to_file(self, output_file):
-        base_pair_lines = self.extract_lines_after_heading("Base-pairs")
+        base_pair_lines = self.extract_information("Base-pairs")
         with open(output_file, "w") as file:
             for line in base_pair_lines:
                 file.write(line)
