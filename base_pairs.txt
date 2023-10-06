@@ -1,0 +1,14 @@
+R3-S16 : G-C Bs/Ww pairing antiparallel cis 128 
+R4-S15 : T-A Ws/Wh pairing antiparallel cis one_hbond 
+R5-S14 : C-G Ww/Ww pairing antiparallel cis XIX 
+R6-S13 : A-T Ww/Ww pairing antiparallel cis one_hbond 
+R7-S12 : A-T Ww/Ww pairing antiparallel cis 
+R8-S11 : G-C Ww/Ww pairing antiparallel cis one_hbond 
+R9-S10 : T-A Ws/Ww pairing antiparallel cis one_hbond 
+R11-S8 : C-G Ww/Ww pairing antiparallel cis 
+R17-T14 : C-G Ww/Ww pairing antiparallel cis 
+R18-T13 : C-G Ww/Bs pairing antiparallel cis 128 
+R19-T12 : T-A Ww/Ww pairing antiparallel cis 
+R20-T11 : G-C Ww/Ww pairing antiparallel cis XIX 
+R21-T10 : G-C Wh/Wh pairing antiparallel cis one_hbond 
+R22-T9 : T-A Ww/Ww pairing antiparallel cis 
