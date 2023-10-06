@@ -1,6 +1,6 @@
 class Annotations:
-    def __init__(self, annotations_list) -> None:
-        self.annotations_list = annotations_list
+    def __init__(self, annotations_text) -> None:
+        self.annotations_list = annotations_text.split("\n")
 
 
     def write_base_pair_info_to_file(self, output_file):

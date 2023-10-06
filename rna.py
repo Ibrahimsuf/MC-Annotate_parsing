@@ -27,5 +27,5 @@ class RNA:
         
 
     def write_to_output_file(self, kind_of_annotation):
-        output_filename = f"{self.rna_name} {kind_of_annotation}"
+        output_filename = f"{self.rna_name}_{kind_of_annotation}"
         self.annotations.write_base_pair_info_to_file(output_filename)
