@@ -12,4 +12,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 2:
         main()
     else:
-        print("python main.py <annotations filename> <output filename>")
+        print("python main.py <rna filename>")

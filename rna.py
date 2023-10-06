@@ -10,7 +10,7 @@ class RNA:
 
 
     def run_mc_annotate(self):
-        command = f"./MC-Annotate {self.rna_file}"
+        command = ["./MC-Annotate", self.rna_file]
         process = subprocess.Popen([command], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         output, error = process.communicate()
 
