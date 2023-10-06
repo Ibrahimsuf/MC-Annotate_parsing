@@ -19,7 +19,7 @@ class RNA:
                 print("Error output:")
                 print(result.stderr)
             else:
-                return result
+                return result.stdout
 
             print("MC-Annotate completed successfully.")
         except subprocess.CalledProcessError as e:
