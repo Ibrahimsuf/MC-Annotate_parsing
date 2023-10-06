@@ -10,15 +10,21 @@ class RNA:
 
 
     def run_mc_annotate(self):
-        command = ["./MC-Annotate", self.rna_file]
-        process = subprocess.Popen([command], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        output, error = process.communicate()
+        command = ["./MC-Annotate", pdb_file]
+        try:
+            # Run the command and capture the output
+            result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
 
-        if process.returncode == 0:
-            return output
-        else:
-            print(f"Error: {error}")
-            return None
+            if result.stderr:
+                print("Error output:")
+                print(result.stderr)
+            else:
+                return result
+
+            print("MC-Annotate completed successfully.")
+        except subprocess.CalledProcessError as e:
+            print(f"Error running MC-Annotate: {e}")
+        
 
     def write_to_output_file(self, kind_of_annotation):
         output_filename = f"{self.rna_name} {kind_of_annotation}"
