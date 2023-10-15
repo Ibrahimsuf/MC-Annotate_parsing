@@ -1,5 +1,5 @@
 # MC-Annotate_parsing
-Python script to parse the output of MC-Annotations
+Python script to parse the output of MC-Annotations and RNAVIEW annotations
 
 You must download MC-Annotate(https://major.iric.ca/MajorLabEn/MC-Tools.html) and move it to this directory, as well as install and configure rna view(https://github.com/rcsb/RNAView)
 
