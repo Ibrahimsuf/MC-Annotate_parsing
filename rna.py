@@ -92,8 +92,8 @@ class RNA:
 
     @staticmethod
     def get_file_contents(file_name):
-        with open(file_name, "r"):
-            return file_name.read()
+        with open(file_name, "r") as file:
+            return file.read()
 
 
 
