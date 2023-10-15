@@ -21,7 +21,7 @@ class RNA:
                 print("Error output:")
                 print(result.stderr)
             else:
-                self.MCAnnotate_output =  result.stdout
+                self.MCAnnotate_output =  result.stdout.split("\n")
 
             print("MC-Annotate completed successfully.")
         except subprocess.CalledProcessError as e:
@@ -42,8 +42,6 @@ class RNA:
     
     def get_MC_base_pair_annotations(self):
         base_pair_info = RNA.get_lines_after(self.MCAnnotate_output, "Base-pairs")
-
-        print(base_pair_info)
         for line in base_pair_info:
             #create an annotation object for each base_pair
             base_pair_annotation = BasePairAnnotation()
