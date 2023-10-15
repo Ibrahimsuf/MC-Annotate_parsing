@@ -79,6 +79,7 @@ class RNA:
             heading_found = False
 
             for line in lines:
+                print(heading_keyword in line)
                 # Check if the heading_keyword is in the line
                 if heading_keyword in line:
                     heading_found = True
@@ -89,6 +90,8 @@ class RNA:
                 # If the heading has been found, add the line to the result
                 if heading_found:
                     lines_after_heading.append(line)
+            
+            print(lines_after_heading)
 
             return lines_after_heading
 
