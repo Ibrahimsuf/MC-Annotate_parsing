@@ -75,30 +75,29 @@ class RNA:
         output_file_name = f"{self.name}.all_base_pair_annotations"
         pd.DataFrame(self.annotations_unpacked).to_csv(output_file_name)
         
-        
+    @staticmethod
+    def get_lines_after(lines, heading_keyword, ending_keyword = None):
+            lines_after_heading = []
+            heading_found = False
 
+            for line in lines:
+                # Check if the heading_keyword is in the line
+                if heading_keyword in line:
+                    heading_found = True
+                    continue
 
-def get_lines_after(lines, heading_keyword, ending_keyword = None):
-        lines_after_heading = []
-        heading_found = False
+                if ending_keyword and ending_keyword in line:
+                    break
+                # If the heading has been found, add the line to the result
+                if heading_found:
+                    lines_after_heading.append(line)
 
-        for line in lines:
-            # Check if the heading_keyword is in the line
-            if heading_keyword in line:
-                heading_found = True
-                continue
+            return lines_after_heading
 
-            if ending_keyword and ending_keyword in line:
-                break
-            # If the heading has been found, add the line to the result
-            if heading_found:
-                lines_after_heading.append(line)
-
-        return lines_after_heading
-
-def get_file_contents(file_name):
-    with open(file_name, "r"):
-        return file_name.read()
+    @staticmethod
+    def get_file_contents(file_name):
+        with open(file_name, "r"):
+            return file_name.read()
 
 
 
