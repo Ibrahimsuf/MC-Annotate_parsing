@@ -10,11 +10,6 @@ def main():
     rna.run_RNAView()
     rna.get_MC_base_pair_annotations()
     rna.get_RNAVIEW_annotations()
-
-    print(rna.MCAnnotate_output)
-    print(rna.RNAVIEW_output)
-    print(rna.MC_base_pair_annotations)
-    print(rna.RNAVIEW_base_pair_annotations)
     rna.write_base_pair_annotations_to_file()
 
     
