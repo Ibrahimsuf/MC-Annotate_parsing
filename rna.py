@@ -37,7 +37,7 @@ class RNA:
                 print(result.stderr)
             else:
                 output_filename = f"{self.pdb_file}.out"
-                self.RNAVIEW_output =  get_file_contents(output_filename)
+                self.RNAVIEW_output = RNA.get_file_contents(output_filename)
 
             print("RNA View completed successfully.")
         except subprocess.CalledProcessError as e:
@@ -45,7 +45,7 @@ class RNA:
 
     
     def get_MC_base_pair_annotations(self):
-        base_pair_info = get_lines_after(self.MCAnnotate_output, "Base-pairs")
+        base_pair_info = RNA.get_lines_after(self.MCAnnotate_output, "Base-pairs")
 
         for line in base_pair_info:
             #create an annotation object for each base_pair
@@ -58,7 +58,7 @@ class RNA:
                 self.annotations[base_pair_annotation.MClocation] = base_pair_annotation
     
     def get_RNAVIEW_annotations(self):
-        base_pair_info = get_lines_after(self.RNAVIEW_output, "BEGIN_base-pair", "END_base-pair")
+        base_pair_info = RNA.get_lines_after(self.RNAVIEW_output, "BEGIN_base-pair", "END_base-pair")
         for line in base_pair_info:
             base_pair_annotation = BasePairAnnotation()
             base_pair_annotation.read_features_from_RNAVIEW_ouput(line)
@@ -74,7 +74,7 @@ class RNA:
 
         output_file_name = f"{self.name}.all_base_pair_annotations"
         pd.DataFrame(self.annotations_unpacked).to_csv(output_file_name)
-        
+
     @staticmethod
     def get_lines_after(lines, heading_keyword, ending_keyword = None):
             lines_after_heading = []
