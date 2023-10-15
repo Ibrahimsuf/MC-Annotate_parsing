@@ -43,6 +43,7 @@ class RNA:
     def get_MC_base_pair_annotations(self):
         base_pair_info = RNA.get_lines_after(self.MCAnnotate_output, "Base-pairs")
 
+        print(base_pair_info)
         for line in base_pair_info:
             #create an annotation object for each base_pair
             base_pair_annotation = BasePairAnnotation()
@@ -55,6 +56,8 @@ class RNA:
     
     def get_RNAVIEW_annotations(self):
         base_pair_info = RNA.get_lines_after(self.RNAVIEW_output, "BEGIN_base-pair", "END_base-pair")
+
+        print(base_pair_info)
         for line in base_pair_info:
             base_pair_annotation = BasePairAnnotation()
             base_pair_annotation.read_features_from_RNAVIEW_ouput(line)
