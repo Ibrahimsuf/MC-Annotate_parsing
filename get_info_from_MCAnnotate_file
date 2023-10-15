@@ -1,0 +1,28 @@
+import sys
+from annotations import Annotations
+
+from Bassepairannotation import BasePairAnnotation
+
+
+def main():
+    annotations_file = sys.argv[1]
+    annotations = None
+
+    with open(annotations_file, 'r') as file:
+        annotations = Annotations(file.read())
+    
+    base_pair_annotations = []
+    for annotation in annotations.extract_information("Base-pairs"):
+        base_pair_annotation = BasePairAnnotation()
+        base_pair_annotation.read_features_from_MCAnnotate_ouput(annotation)
+        base_pair_annotations.append(base_pair_annotation)
+
+
+    print(base_pair_annotations[0].features)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        main()
+    else:
+        print("python main.py <rna filename>")

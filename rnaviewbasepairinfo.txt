@@ -1,0 +1,27 @@
+     3_36, R:     3 g-c    16 S: W/W cis    syn    n/a
+     4_35, R:     4 u-a    15 S: W/W cis         n/a
+     5_34, R:     5 c-g    14 S: +/+ cis         XIX
+     6_33, R:     6 a-u    13 S: -/- cis         XX
+     7_32, R:     7 a-u    12 S: -/- cis         XX
+     8_30, R:     8 g-a    10 S: W/W cis         VIII
+     8_31, R:     8 g-c    11 S: W/W cis         n/a
+     9_30, R:     9 u-a    10 S: W/W cis         n/a
+    10_29, R:    10 a-u     9 S: -/- cis         XX
+    11_28, R:    11 c-g     8 S: +/+ cis         XIX
+    12_27, R:    12 u-a     7 S: -/- cis         XX
+    13_26, R:    13 u-a     6 S: -/- cis         XX
+    16_47, R:    16 g-C    15 T: W/W cis         n/a
+    17_46, R:    17 c-G    14 T: +/+ cis         XIX
+    18_45, R:    18 c-G    13 T: +/+ cis         XIX
+    19_44, R:    19 u-A    12 T: -/- cis         XX
+    20_43, R:    20 g-C    11 T: +/+ cis         XIX
+    21_42, R:    21 g-C    10 T: W/W cis         n/a
+    21_43, R:    21 g-C    11 T:      stacked
+    22_41, R:    22 u-A     9 T: -/- cis         XX
+    22_42, R:    22 u-C    10 T:      stacked
+    33_34, S:    13 u-g    14 S:      stacked
+     1_37, R:     1 a-u    17 S: W/W cis         !1H(b_b)
+    11_27, R:    11 c-a     7 S: W/W cis         !1H(b_b).
+    12_26, R:    12 u-a     6 S: W/W cis         !1H(b_b).
+     5_35, R:     5 c-a    15 S: S/W cis         !(s_s)
+    10_28, R:    10 a-g     8 S: W/W cis         !(s_s)
