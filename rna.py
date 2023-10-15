@@ -32,12 +32,8 @@ class RNA:
         try:
             result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
 
-            if result.stderr:
-                print("Error output:")
-                print(result.stderr)
-            else:
-                output_filename = f"{self.pdb_file}.out"
-                self.RNAVIEW_output = RNA.get_file_contents(output_filename)
+            rna_view_output_filename = f"{self.pdb_file}.out"
+            self.RNAVIEW_output = RNA.get_file_contents(rna_view_output_filename)
 
             print("RNA View completed successfully.")
         except subprocess.CalledProcessError as e:
