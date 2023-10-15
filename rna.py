@@ -65,11 +65,8 @@ class RNA:
                 self.annotations[base_pair_annotation.RNAVIEW_location] = base_pair_annotation
     
     def write_base_pair_annotations_to_file(self):
-        print(self.annotations.items())
         for key, annotation in self.annotations.items():
             self.annotations_unpacked[key] = annotation.features
-            print(self.annotations_unpacked)
-
         output_file_name = f"{self.name}.all_base_pair_annotations"
         pd.DataFrame(self.annotations_unpacked).to_csv(output_file_name)
 
