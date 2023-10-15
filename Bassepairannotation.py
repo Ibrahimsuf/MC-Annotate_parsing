@@ -7,7 +7,7 @@ class BasePairAnnotation:
     
     def read_features_from_MCAnnotate_ouput(self, MCAnnotateoutput):
         #MCAnnotate_output is "R3-S16 : G-C Bs/Ww pairing antiparallel cis 128"
-        self.MClocation                                                 = MCAnnotateoutput.strip().split()[0]
+        self.MClocation                                          = MCAnnotateoutput.strip().split()[0]
         self.features["MC-Base-base interaction"]                = MCAnnotateoutput.strip().split()[2].upper()
         self.features["MC-Interacting edges"]                    = MCAnnotateoutput.strip().split()[3]
         self.features["MC-Paired/Nonpaired"]                     = MCAnnotateoutput.strip().split()[4]

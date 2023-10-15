@@ -1,0 +1,11 @@
+,R3-S16,R4-S15,R5-S14,R6-S13,R7-S12,R8-S11,R9-S10,R11-S8,R17-T14,R18-T13,R19-T12,R20-T11,R21-T10,R22-T9,R8-S10,R10-S9,R12-S7,R13-S6,R16-T15,R21-T11,R22-T10,S13-S14,R1-S17,R11-S7,R12-S6,R5-S15,R10-S8
+MC-Base-base interaction,G-C,T-A,C-G,A-T,A-T,G-C,T-A,C-G,C-G,C-G,T-A,G-C,G-C,T-A,,,,,,,,,,,,,
+MC-Interacting edges,Bs/Ww,Ws/Wh,Ww/Ww,Ww/Ww,Ww/Ww,Ww/Ww,Ws/Ww,Ww/Ww,Ww/Ww,Ww/Bs,Ww/Ww,Ww/Ww,Wh/Wh,Ww/Ww,,,,,,,,,,,,,
+MC-Paired/Nonpaired,pairing,pairing,pairing,pairing,pairing,pairing,pairing,pairing,pairing,pairing,pairing,pairing,pairing,pairing,,,,,,,,,,,,,
+MC-Orientation around glycosidic bond,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,antiparallel,,,,,,,,,,,,,
+MC-Relative glycosidic bond orientation,cis,cis,cis,cis,cis,cis,cis,cis,cis,cis,cis,cis,cis,cis,,,,,,,,,,,,,
+MC-Sym number,128,one_hbond,XIX,one_hbond,n/a,one_hbond,one_hbond,n/a,n/a,128,n/a,XIX,one_hbond,n/a,,,,,,,,,,,,,
+position,3_36,4_35,5_34,6_33,7_32,8_31,9_30,11_28,17_46,18_45,19_44,20_43,21_42,22_41,8_30,10_29,12_27,13_26,16_47,21_43,22_42,33_34,1_37,11_27,12_26,5_35,10_28
+RNAVIEW-Interacting edges,W/W,W/W,+/+,-/-,-/-,W/W,W/W,+/+,+/+,+/+,-/-,+/+,W/W,-/-,W/W,-/-,-/-,-/-,W/W,,,,W/W,W/W,W/W,S/W,W/W
+RNAVIEW-Base-base interaction,g-c,u-a,c-g,a-u,a-u,g-c,u-a,c-g,c-G,c-G,u-A,g-C,g-C,u-A,g-a,a-u,u-a,u-a,g-C,g-C,u-C,u-g,a-u,c-a,u-a,c-a,a-g
+RNAVIEW-MC-Sym number,n/a,n/a,XIX,XX,XX,n/a,n/a,XIX,XIX,XIX,XX,XIX,n/a,XX,VIII,XX,XX,XX,n/a,stacked,stacked,stacked,!1H(b_b),!1H(b_b).,!1H(b_b).,!(s_s),!(s_s)

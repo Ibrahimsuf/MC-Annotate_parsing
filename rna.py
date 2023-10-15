@@ -45,17 +45,18 @@ class RNA:
         for line in base_pair_info:
             #create an annotation object for each base_pair
             base_pair_annotation = BasePairAnnotation()
-            base_pair_annotation.read_features_from_MCAnnotate_ouput(line)
 
-            if base_pair_annotation.MClocation in self.annotations:
-                self.annotations[base_pair_annotation.MClocation] = self.annotations[base_pair_annotation.MClocation].merge(base_pair_annotation)
-            else:
-                self.annotations[base_pair_annotation.MClocation] = base_pair_annotation
+            try:
+                base_pair_annotation.read_features_from_MCAnnotate_ouput(line)
+                if base_pair_annotation.MClocation in self.annotations:
+                    self.annotations[base_pair_annotation.MClocation] = self.annotations[base_pair_annotation.MClocation].merge(base_pair_annotation)
+                else:
+                    self.annotations[base_pair_annotation.MClocation] = base_pair_annotation
+            except:
+                pass
     
     def get_RNAVIEW_annotations(self):
         base_pair_info = RNA.get_lines_after(self.RNAVIEW_output, "BEGIN_base-pair", "END_base-pair")
-
-        print(base_pair_info)
         for line in base_pair_info:
             base_pair_annotation = BasePairAnnotation()
             base_pair_annotation.read_features_from_RNAVIEW_ouput(line)
@@ -68,7 +69,7 @@ class RNA:
     def write_base_pair_annotations_to_file(self):
         for key, annotation in self.annotations.items():
             self.annotations_unpacked[key] = annotation.features
-        output_file_name = f"{self.name}.all_base_pair_annotations"
+        output_file_name = f"{self.name}.all_base_pair_annotations.csv"
         pd.DataFrame(self.annotations_unpacked).to_csv(output_file_name)
 
     @staticmethod
@@ -77,7 +78,6 @@ class RNA:
             heading_found = False
 
             for line in lines:
-                print(heading_keyword in line)
                 # Check if the heading_keyword is in the line
                 if heading_keyword in line:
                     heading_found = True
@@ -89,8 +89,6 @@ class RNA:
                 if heading_found:
                     lines_after_heading.append(line)
             
-            print(lines_after_heading)
-
             return lines_after_heading
 
     @staticmethod
